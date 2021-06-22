@@ -1,3 +1,7 @@
+######################## Configuracion de la pagina #######################
+st.set_page_config(layout="wide", page_title='Exploración de data')
+
+
 ######################## Importar Librerias ##############################
 import streamlit as st
 import pandas as pd
@@ -5,8 +9,7 @@ import principal
 import tablas
 import graficos
 
-######################## Configuracion de la pagina #######################
-st.set_page_config(layout="wide", page_title='Exploración de data')
+
 
 
 

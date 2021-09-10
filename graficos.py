@@ -3,18 +3,21 @@ import streamlit as st
 import numpy as np
 import pandas as pd
 from traitlets.traitlets import default
-from app import *
 import plotly.express as px
 import matplotlib.pyplot as plt
 import seaborn as sns
 
     
 def graficos(df):
-    st.title('Visualización de datos')
+    st.title('VISUALIZACIÓN DE DATOS')
     options1=list(df.columns)
     categorical = st.selectbox(
     'Escoge tu variable categorica para desplegar en el grafico',
     options1)
+    with st.expander("Variables Categóricas", expanded=False):
+        st.info("""
+        - Las variables categóricas contienen un número finito de categorías o grupos distintos. Los datos categóricos pueden no tener un orden lógico. Por ejemplo, los predictores categóricos incluyen sexo, tipo de material, en el caso de ejemplo son alteración, mineralización y dominio.
+        """)
     #categorical=list(categorical)
     cate=df[categorical].unique()
     
@@ -33,6 +36,10 @@ def graficos(df):
     'Escoge tu variable continua para desplegar en el grafico',
     options2)
     cate2=df[continuous].unique()
+    with st.expander("Variables Continuas", expanded=False):
+        st.info("""
+        - Las variables continuas son variables numéricas que tienen un número infinito de valores entre dos valores cualesquiera. Una variable continua puede ser numérica o de fecha/hora. Por ejemplo, la longitud de una pieza o la fecha y hora en que se recibe un pago, en el caso de ejemplo son "bo", "cpy", "py".
+        """)
     
     
     fig2 = px.scatter_3d(df, x=options1[0],  y=options1[1], z=options1[2], color=continuous, color_continuous_scale=px.colors.sequential.Jet, range_color=[0.0, df[continuous].quantile(0.95)])

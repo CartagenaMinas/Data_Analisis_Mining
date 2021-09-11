@@ -8,7 +8,7 @@ def principal():
     st.title('Data Explorer IDL Mining - Version 0.1.3')
     col1, col2 = st.columns([2, 2])
     col1.markdown("<div style='text-align: justify'>Bienvenidos en esta app donde se podrá explorar los estadísticos básicos y visualizar modelos de bloques y taladros de exploración.</div>", unsafe_allow_html=True)
-    col1.markdown("<div style='text-align: justify'>Si quieres quieres conocer el codigo de esta app escrito en python puedes visitarlo en el siguiente enlace <a style='color:black; font-size:110% ;' href='https://github.com/CartagenaMinas/Data_Analisis_Mining' target='_blank'><i class='fa fa-rocket'></i>GitHub</a> </div>", unsafe_allow_html=True)
+    col1.markdown("<div style='text-align: justify'>Si quieres conocer el codigo de esta app escrito en python puedes visitarlo en el siguiente enlace <a style='color:black; font-size:110% ;' href='https://github.com/CartagenaMinas/Data_Analisis_Mining' target='_blank'><i class='fa fa-rocket'></i>GitHub</a> </div>", unsafe_allow_html=True)
     col1.markdown("<div style='text-align: justify'>Tambien puedes visitar nuestra pagina web IDL Mining donde subimos post sobre programacion orientado a la ingeniera de minas y nos dedicamos a la creacion de Modelos de Deep Learning.</div>", unsafe_allow_html=True)
  
     chart_data = pd.DataFrame(
